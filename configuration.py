@@ -28,7 +28,8 @@ class UserSetup():
         self.user.most_used_exotic_dict = translator.translateHashes(self.user, self.user.most_used_exotic_dict, 'DestinyInventoryItemDefinition', False)
         self.user.seasons_played = translator.translateHashes(self.user,self.user.seasons_played, 'DestinySeasonDefinition', False)
         self.user.main_emblem = translator.translateHashes(self.user,self.user.main_emblem, 'DestinyInventoryItemDefinition', False)
-        self.user.main_title = translator.translateHashes(self.user,self.user.main_title, 'DestinyRecordDefinition', True)
+        if self.user.main_title != 'No Title Equipped':
+            self.user.main_title = translator.translateHashes(self.user,self.user.main_title, 'DestinyRecordDefinition', True)
         self.user.main = structures.classes[self.user.main]
         self.user.platform = structures.platforms[self.user.platform]
     def fullUserSetup(self):
