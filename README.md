@@ -1,4 +1,4 @@
-### The Destiny Resume ###
+# The Destiny Resume #
 ## Summary ##
 This is a tool to create a resume based on various destiny 2 stats, such as raids, dungeons, and titles. It was made as a fun side project.
 The tool leverages the bungie API to get information about the player, translates and formats it, then sends it to gemini to create a summary.
