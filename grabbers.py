@@ -141,7 +141,10 @@ class AccountStats():
                 max = total_minutes_per_char
                 self.main = character_ids[character]['classType']
                 self.main_emblem = character_ids[character]['emblemHash']
-                self.main_title = character_ids[character]['titleRecordHash']
+                try:
+                    self.main_title = character_ids[character]['titleRecordHash']
+                except:
+                    self.main_title = 'No Title Equipped'
 
 
     
